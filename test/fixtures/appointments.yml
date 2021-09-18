@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appt_date: MyString
+  appt_time: MyString
+  duration: 1.5
+  user: one
+  doctor: one
+
+two:
+  appt_date: MyString
+  appt_time: MyString
+  duration: 1.5
+  user: two
+  doctor: two
