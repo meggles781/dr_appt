@@ -5,8 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 specialty = ['OBGYN', 'Surgeon', 'Neurosurgeon', 'Cardiologists', 'Dermatologists']
+
 time = ['1PM', '2PM' , '3PM' , '4PM', '5PM', '12PM', '11AM']
+
 duration = [1 , 1.5, 2 , 2.5]
 10.times do
   user = User.create(
@@ -27,10 +30,7 @@ duration = [1 , 1.5, 2 , 2.5]
     duration: duration.sample
   )
   end
+
 end
+
 puts "db seeded"
-
-
-
-
-
