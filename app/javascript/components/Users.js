@@ -8,10 +8,10 @@ const Users = ({ users }) => {
       { 
         users.map( (user) => (
           <div>
-            <h5>{user.name}</h5>
+            <h5>{user.first_name} {user.last_name}</h5>
             <a href={`/users/${user.id}`}>Show</a>
             {' '}
-            <a href={`/users/${users.id}/edit`}>Edit</a>
+            <a href={`/users/${user.id}/edit`}>Edit</a>
             {' '}
             <a 
               href={`/users/${user.id}`} 
