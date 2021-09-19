@@ -10,7 +10,7 @@ const UserEdit = ({ user }) => {
     <>
       <h1>New Uer Form</h1>
       <form action={`/users/${user.id}`} method="post">
-      <input type="hidden" name="_method" value="patch" /> // need this for edit!
+      <input type="hidden" name="_method" value="patch" />
 
         <input
           type="text"
@@ -49,6 +49,7 @@ const UserEdit = ({ user }) => {
           placeholder="Password"
         />
         <button type='submit'>Edit User</button>
+        <a href="/">back</a>
       </form>
     </>
   );
