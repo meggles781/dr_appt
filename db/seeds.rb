@@ -18,14 +18,12 @@ duration = [1 , 1.5, 2 , 2.5]
     email: Faker::Internet.email,
     password: "password1"
   )
-
   10.times do 
     doctor = Doctor.create(
       first_name: Faker::Name.first_name,
        last_name:Faker::Name.last_name,
         specialty: specialty.sample
         )
-
   Appointment.create(
     appt_date: Faker::Date.between(from: 2.days.ago, to: Date.today),
     appt_time: time.sample,
