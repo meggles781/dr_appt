@@ -33,13 +33,13 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to users_path
     else 
-      render component: "UserEdit", props: { user: @user}
+      render component: "UserEdit", props: { user: @user }
     end
   end
 
 
   def show
-    render component: 'User', props: { user: @user }
+    render component: 'User', props: { user: @user}
   end
 
   

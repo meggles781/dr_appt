@@ -3,22 +3,19 @@ import React from 'react';
 const Users = ({ users }) => {
   return (
     <>
-      <h1>Welcome new Patient</h1>
-      <a href="/users/new">New User</a>
+      <h1>Users</h1>
+      <a href="/users/new">Add a User</a>
+      <br />
+      {/* <h2>{ users.length <= 0 ? "No Users" : "" }</h2>  */}
       { 
-        users.map( (user) => (
+        users.map((user) => (
           <div>
-            <h5>{user.first_name} {user.last_name}</h5>
-            <a href={`/users/${user.id}`}>Show</a>
+          <a href={`/users/${user.id}`}>{user.first_name} {user.last_name}</a>
+          {' '}
+
+          <a href={`/users/${user.id}/edit`}>Edit</a>
             {' '}
-            <a href={`/users/${user.id}/edit`}>Edit</a>
-            {' '}
-            <a 
-              href={`/users/${user.id}`} 
-              data-method="delete"
-            >
-              Delete
-            </a>
+          <a href={`/users/${user.id}`} data-method="delete">Delete</a>
           </div>
         ))
       }

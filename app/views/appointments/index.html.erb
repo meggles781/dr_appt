@@ -1,0 +1,14 @@
+<h1><%= @doctor.name %>: Appointments</h1>
+<%= link_to 'Add Appointments', new_course_enrollment_path(@doctor) %>
+<hr />
+
+<h2>Doctors</h2>
+<ul>
+  <% @doctors.each do |doctor| %>
+    <li>
+      <%= doctor.user.first_name doctor.user.last_name %>
+      <br />
+      <%= link_to 'Remove', course_enrollment_path(@doctor), method: :delete %>
+    </li>
+  <% end %>
+</ul>

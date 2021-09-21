@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  before_action :set_doctor
   def index
     
     @appointments = User.appointments
@@ -20,11 +21,6 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  def edit 
-    @appointment = @user.appointment.find(params[:id])
-      render component:'AppointmentEdit', props: { patient:
-      @user, appointment: @appointment }
-      end
 
       def update
         @appointment = @user.appointment.find (params[:id])
@@ -39,12 +35,12 @@ class AppointmentsController < ApplicationController
         @appointment = @user.appointment.find(params[:id])
         render conponents:'Appointment' ,props: { patient: @patient, appointment: @appointment }
       end
-    end
+    
 
 
   def destroy
- @user.appointments.find(params[:id]).destroy
- redirect_to_appointment_path
+    @user.appointments.find(params[:id]).destroy
+  redirect_to_appointment_path
   end
 
  private

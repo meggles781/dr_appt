@@ -19,7 +19,7 @@ duration = [1 , 1.5, 2 , 2.5]
     password: "password1"
   )
   10.times do 
-    doctor = Doctor.create(
+  doctor = Doctor.create(
       first_name: Faker::Name.first_name,
        last_name:Faker::Name.last_name,
         specialty: specialty.sample
